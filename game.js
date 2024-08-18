@@ -16,10 +16,9 @@ function playSound(colorId) {
 }
 
 // detect all the keypresses
-$(document).on("keypress", function (event) {
+$(document).on("keypress", function () {
     if (!started) {
         started = true;
-
         nextSequence();
     }
 })
@@ -44,7 +43,7 @@ function nextSequence() {
 }
 
 function gameOver() {
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    // $("#level-title").text("Game Over, Press Any Key to Restart");
     level = 0;
     userCounter = 0;
     gamePattern = [];
